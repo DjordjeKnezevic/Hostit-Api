@@ -12,8 +12,8 @@ init: start
 	@docker-compose exec -T app composer install
 	@echo "Running migrations and seeders..."
 	@docker-compose exec -T app php artisan migrate:fresh --seed
-	@echo "Linking storage..."
-	@docker-compose exec -T app php artisan storage:link
+	@echo "Adding permissions to storage..."
+	@docker-compose exec -T app chmod -R 777 /var/www/html/storage
 	@echo "Project initialization complete."
 
 start:

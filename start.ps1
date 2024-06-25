@@ -36,7 +36,7 @@ function Init-Project {
     docker-compose exec -T app composer install
     Write-Host "Running migrations and seeders..."
     docker-compose exec -T app php artisan migrate:fresh --seed
-    Write-Host "Linking storage..."
-    docker-compose exec -T app php artisan storage:link
+    Write-Host "Adding permissions to storage file..."
+    docker-compose exec -T app chmod -R 777 /var/www/html/storage
     Write-Host "Project initialization complete."
 }
