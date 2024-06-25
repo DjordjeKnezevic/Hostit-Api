@@ -20,12 +20,10 @@ class DatabaseSeeder extends Seeder
             RolesTableSeeder::class,
             LocationsTableSeeder::class,
             TestimonialsTableSeeder::class,
-            FaqsTableSeeder::class,
             UsersTableSeeder::class,
             ServerTypeTableSeeder::class,
             ServersTableSeeder::class,
             PricingTableSeeder::class,
-            RegionResourcesTableSeeder::class,
             NavigationLinksTableSeeder::class,
         ]);
     }
